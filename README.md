@@ -72,37 +72,7 @@ curl -X POST http://localhost:8000/posts \
   -d '{"title": "Deno Rocks", "content": "With Hono too"}'
 ```
 
----
 
-## 🛡 Permissions
 
-This app only requires:
 
-```
---allow-net
-```
 
----
-
-## ✨ Roadmap
-
-- [x] Basic post creation  
-- [ ] List posts  
-- [ ] Connect to a DB (SQLite or KV)  
-- [ ] Deploy to Deno Deploy  
-- [ ] Use tiny-injector for dependency injection  
-- [ ] Add unit + integration tests with `std/testing`  
-
----
-
-## 👨‍💻 Author
-
-**Lucas Sahdo**  
-[github.com/sahdoio](https://github.com/sahdoio)  
-[linkedin.com/in/sahdo](https://linkedin.com/in/sahdo)
-
----
-
-## 📄 License
-
-[MIT](LICENSE)
