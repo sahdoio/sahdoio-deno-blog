@@ -1,114 +1,108 @@
-```markdown
-# 🦕 sahdoio-deno-blog
+# 🦕 Sahdoio Deno Blog
 
-a clean, fast, and modular **deno + hono** api for powering my personal blog — following clean architecture principles.
-
----
-
-## 🚀 stack
-
-- [deno](https://deno.land) – modern runtime for typescript/js
-- [hono](https://hono.dev) – ultra-fast web framework
-- clean architecture – separation by `domain`, `app`, `infra`
-- optional: dockerized or deployable on [deno deploy](https://deno.com/deploy)
+A clean, fast, and modular **Deno + Hono** API for powering my personal blog — following Clean Architecture principles.
 
 ---
 
-## 📁 project structure
+## 🚀 Stack
+
+- [Deno](https://deno.land) – Modern runtime for TypeScript/JavaScript  
+- [Hono](https://hono.dev) – Ultra-fast web framework  
+- Clean Architecture – Separation by `domain`, `app`, `infra`  
+- Optional: Dockerized or deployable on [Deno Deploy](https://deno.com/deploy)  
+
+---
+
+## 📁 Project Structure
 
 ```
-
 api/
-├── app/               # application layer (use cases)
+├── app/               # Application layer (use cases)
 │   └── post/
 │       └── createPost.ts
-├── domain/            # domain entities and types
+├── domain/            # Domain entities and types
 │   └── post.ts
-├── infra/             # infrastructure (routes, controllers)
+├── infra/             # Infrastructure (routes, controllers)
 │   ├── controllers/
 │   └── routes/
-├── main.ts            # hono app entrypoint
-├── deno.json          # config + tasks
+├── main.ts            # Hono app entrypoint
+├── deno.json          # Config + tasks
 └── .gitignore
-
-````
+```
 
 ---
 
-## 💻 usage
+## 💻 Usage
 
-### 🧪 development (hot reload)
+### 🧪 Development (Hot Reload)
 
-```bash
+```
 denon dev
-````
+```
 
-> requires `denon` installed globally:
+> Requires `denon` installed globally:  
 > `deno install --global --allow-all --unstable https://deno.land/x/denon/denon.ts`
 
-### ▶ production
+### ▶ Production
 
-```bash
+```
 deno run --allow-net main.ts
 ```
 
-or with task:
+Or with task:
 
-```bash
+```
 deno task start
 ```
 
-### 🐳 with docker
+### 🐳 With Docker
 
-```bash
+```
 docker build -t deno-blog .
 docker run -p 8000:8000 deno-blog
 ```
 
 ---
 
-## 📬 example request
+## 📬 Example Request
 
-```bash
+```
 curl -X POST http://localhost:8000/posts \
   -H "Content-Type: application/json" \
-  -d '{"title": "deno rocks", "content": "with hono too"}'
+  -d '{"title": "Deno Rocks", "content": "With Hono too"}'
 ```
 
 ---
 
-## 🛡 permissions
+## 🛡 Permissions
 
-this app only requires:
+This app only requires:
 
-```bash
+```
 --allow-net
 ```
 
 ---
 
-## ✨ roadmap
+## ✨ Roadmap
 
-* [x] basic post creation
-* [ ] list posts
-* [ ] connect to a db (sqlite or kv)
-* [ ] deploy to deno deploy
-* [ ] use tiny-injector for dependency injection
-* [ ] add unit + integration tests with `std/testing`
+- [x] Basic post creation  
+- [ ] List posts  
+- [ ] Connect to a DB (SQLite or KV)  
+- [ ] Deploy to Deno Deploy  
+- [ ] Use tiny-injector for dependency injection  
+- [ ] Add unit + integration tests with `std/testing`  
 
 ---
 
-## 👨‍💻 author
+## 👨‍💻 Author
 
-**lucas sahdo**
-[github.com/sahdoio](https://github.com/sahdoio)
+**Lucas Sahdo**  
+[github.com/sahdoio](https://github.com/sahdoio)  
 [linkedin.com/in/sahdo](https://linkedin.com/in/sahdo)
 
 ---
 
-## 📄 license
+## 📄 License
 
 [MIT](LICENSE)
-
-```
-
