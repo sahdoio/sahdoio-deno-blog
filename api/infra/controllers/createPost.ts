@@ -4,7 +4,7 @@ import { CreatePost } from "../../app/post/createPost.ts";
 const createPostUseCase = new CreatePost();
 
 export const createPostController = async (context: Context) => {
-  const body = await c.req.json();
+  const body = await context.req.json();
   const post = await createPostUseCase.execute(body);
   return context.json({ message: "post created", post }, 201);
 };
