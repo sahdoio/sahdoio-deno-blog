@@ -1,0 +1,27 @@
+node_modules/
+.idea/
+.vscode/
+*.code-workspace
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+# Logs and temp files
+logs/
+*.log
+*.tmp
+# Docker files
+*.pid
+docker-compose.override.yml
+# System files
+.DS_Store
+Thumbs.db
+# Test coverage
+coverage/
+# Compiled files
+gen/
+npm/
+# Deno cache
+.cache/
+deno.lock

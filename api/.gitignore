@@ -1,0 +1,35 @@
+# deno cache
+.cache/
+deno.lock
+
+# compiled js cache (optional, only if you check in gen dir)
+gen/
+npm/
+
+# vscode settings
+.vscode/
+*.code-workspace
+
+# environment/config
+.env
+.env.local
+.env.production
+.env.development
+
+# logs and temp
+logs/
+*.log
+*.tmp
+
+# docker
+*.pid
+docker-compose.override.yml
+
+# system
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# test coverage
+coverage/

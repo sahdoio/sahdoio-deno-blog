@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": {
+      "cmd": "deno run --allow-net main.ts",
+      "desc": "start the hono api"
+    }
+  },
+  "watcher": {
+    "exts": ["ts", "tsx", "json"],
+    "paths": ["."]
+  }
+}
